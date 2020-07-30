@@ -21,11 +21,12 @@ class Game(Canvas):
         self.tic()
     
     def tic(self):
-        if stop is False:
+        if stop is False: # game running
             self.update()
             self.draw()
-        else:
-            self.create_text(400,240,fill='snow',font=("Times", "24", "bold"), text='GAME OVER') # score
+        else: # game over
+            self.create_text(400,240,fill='snow',font=("Times", "24", "bold"), text='GAME OVER') # screen Game Over
+            self.create_text(400,270,fill='gray70',font=("Times", "18", "normal"),text='Press key Enter to restart game or press key Esc to quit') 
         self.after(DELAY, self.tic)
 
     def draw(self):
@@ -47,8 +48,10 @@ class Game(Canvas):
                     score +=1
                     rect.kill = True
 
-        if e.keysym == 'Escape':
+        if e.keysym == 'Escape': # quit game
             self.mst.destroy()
+        if e.keysym == 'Return' and stop is True: # reset game 
+            self.reset()
 
     def update(self):
         global time,stop
@@ -56,7 +59,6 @@ class Game(Canvas):
         if time <= 0:
             self.rectangles.append(Rect(self,0,32,32))
             time = rdm.randrange(5,20)
-            print(time)
         time-=1
 
         for rect in self.rectangles:
@@ -77,3 +79,9 @@ class Game(Canvas):
             self.life.w = 400
             self.rectangles.clear()
             stop = True
+
+    def reset(self):
+        global score,time,stop
+        score = 0
+        self.life.w = 400
+        stop = False
