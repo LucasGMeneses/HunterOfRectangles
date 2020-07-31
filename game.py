@@ -24,7 +24,7 @@ class Game(Canvas):
         if stop is False: # game running
             self.update()
             self.draw()
-        else: # game over
+        else: # GAME OVER
             self.create_text(400,240,fill='snow',font=("Times", "24", "bold"), text='GAME OVER') # screen Game Over
             self.create_text(400,270,fill='gray70',font=("Times", "18", "normal"),text='Press key Enter to restart game or press key Esc to quit') 
         self.after(DELAY, self.tic)
@@ -58,7 +58,7 @@ class Game(Canvas):
         flg = False
         if time <= 0:
             self.rectangles.append(Rect(self,0,32,32))
-            time = rdm.randrange(5,20)
+            time = rdm.randrange(3,20)
         time-=1
 
         for rect in self.rectangles:
@@ -71,7 +71,7 @@ class Game(Canvas):
                     flg = False
         
         if flg == True:
-            self.life.w -= 5
+            self.life.w -= 10
             self.rectangles.pop(0)
             flg = False
 

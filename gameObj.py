@@ -13,6 +13,7 @@ class Life:
         ax = self.x + self.w
         ay = self.y + self.h
         self.cnv.create_rectangle(self.x, self.y, ax, ay,fill="red")
+        self.cnv.create_rectangle(self.x, self.y, self.x + 400, ay,outline='snow')
 
 class Rect:
     def __init__(self, cnv, x, w, h):
@@ -28,8 +29,10 @@ class Rect:
         ax = self.x + self.w
         ay = self.y + self.h
         self.cnv.create_rectangle(self.x, self.y, ax, ay,fill=COLORS[self.spr])
+    
     def update(self):
         self.x+=5
+    
     def is_colision(self,obj):
         ax = self.x + self.w
         ay = self.y + self.h
