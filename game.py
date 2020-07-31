@@ -69,9 +69,9 @@ class Game(Canvas):
                     flg = True
                 else:
                     flg = False
-        
+
         if flg == True:
-            self.life.w -= 10
+            self.life.w -= 4
             self.rectangles.pop(0)
             flg = False
 
