@@ -2,7 +2,7 @@
  
 game created with python tkinter
 ## Screenshot
-<img src=screenshots/01.gif/ height=300 width=400>
+<img src=screenshots/01.png/ height=300 width=400>
 ----------------------------
 
 ## Run
