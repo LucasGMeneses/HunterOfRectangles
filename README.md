@@ -1,5 +1,8 @@
 # Hunter Of Rectangles
- game created with python tkinter
+ 
+game created with python tkinter
+## Screenshot
+<img src=screenshots/01.gif/ height=300 width=400>
 ----------------------------
 
 ## Run
@@ -12,6 +15,7 @@ Requires installed python3.x.
   python main.py
   ```
     or run **run.bat**
+    
 * **Linux or MacOS**
 
   ```
