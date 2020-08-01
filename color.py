@@ -1,28 +1,4 @@
-
-vermelho = '\033[31m'
-verde = '\033[32m'
-azul = '\033[34m'
-
-ciano = '\033[36m'
-magenta = '\033[35m'
-amarelo = '\033[33m'
-preto = '\033[30m'
-
-branco = '\033[37m'
-
-original = '\033[0;0m'
-negrito = '\033[1m'
-reverso = '\033[2m'
-
-fundo_preto = '\033[40m'
-fundo_vermelho = '\033[41m'
-fundo_verde = '\033[42m'
-fundo_amarelo = '\033[43m'
-fundo_azul = '\033[44m'
-fundo_magenta = '\033[45m'
-fundo_ciano = '\033[46m'
-fundo_branco = '\033[47m'
-
+# tkinter color names
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
     'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',
     'navajo white', 'lemon chiffon', 'mint cream', 'azure', 'alice blue', 'lavender',
@@ -91,6 +67,7 @@ COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'ol
     'gray81', 'gray82', 'gray83',
     'gray84', 'gray85', 'gray86', 'gray87', 'gray88', 'gray89', 'gray90', 'gray91', 'gray92',
     'gray93', 'gray94', 'gray95', 'gray97', 'gray98', 'gray99']
+
 
 if __name__ =='__main__': # color selector
      
