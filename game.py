@@ -32,8 +32,19 @@ class Game(Canvas):
             self.draw()
        
         else: # GAME OVER
+            file = open('data.txt')
+            bestScore = int(file.read())
+            file.close()
+            
+            if bestScore < score:
+                file = open('data.txt','w')
+                bestScore = score
+                file.write(str(score))
+
+            
             self.create_text(400,240,fill='snow',font=("Times", "24", "bold"), text='GAME OVER') # screen Game Over
-            self.create_text(400,270,fill='gray70',font=("Times", "18", "normal"),text='Press key Enter to restart game or press key Esc to quit') 
+            self.create_text(400,270,fill='snow',font=("Times", "18", "normal"), text='Best Score: ' + str(bestScore)) # best score
+            self.create_text(400,290,fill='gray70',font=("Times", "18", "normal"),text='Press key Enter to restart game or press key Esc to quit') 
         
         self.after(DELAY, self.tic)
 
