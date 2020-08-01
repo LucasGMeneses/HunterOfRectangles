@@ -35,7 +35,7 @@ class Game(Canvas):
             file = open('data.txt')
             bestScore = int(file.read())
             file.close()
-            
+
             if bestScore < score:
                 file = open('data.txt','w')
                 bestScore = score
