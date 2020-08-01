@@ -1,6 +1,7 @@
 # Hunter Of Rectangles
  
-game created with python tkinter
+Game created with python tkinter.
+
 ## Screenshot
 <img src=screenshots/01.png/ height=300 width=480>
 <img src=screenshots/02.png/ height=300 width=480>
